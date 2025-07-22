@@ -3,10 +3,23 @@
     <head>
         <meta charset="utf-8" />
         <title>
-            Banjo Biden's Blog Content Manager
+            Shapard's View Blog Content Manager
         </title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
         <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", (user) => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+                    });
+                }
+            });
+        window.netlifyIdentity.init();
+        }
+</script>
     </body>
 </html>
