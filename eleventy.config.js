@@ -125,6 +125,9 @@ export default async function(eleventyConfig) {
 	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+	eleventyConfig.addCollection("posts", function(collectionApi) {
+  return collectionApi.getFilteredByGlob("content/blog/posts/*.md").reverse();
+	});
 };
 
 export const config = {
@@ -151,7 +154,7 @@ export const config = {
 		data: "../_data",          // default: "_data" (`input` relative)
 		output: "_site"
 	},
-
+	
 	// -----------------------------------------------------------------
 	// Optional items:
 	// -----------------------------------------------------------------
@@ -165,3 +168,4 @@ export const config = {
 
 	// pathPrefix: "/",
 };
+
