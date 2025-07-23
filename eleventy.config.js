@@ -128,6 +128,13 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addCollection("posts", function(collectionApi) {
   return collectionApi.getFilteredByGlob("content/blog/posts/*.md").reverse();
 	});
+	eleventyConfig.addCollection("currentReads", function(collectionApi) {
+  		return collectionApi.getFilteredByGlob("content/reading/*.md").filter(book => !book.data.finished);
+	});
+
+	eleventyConfig.addCollection("archivedReads", function(collectionApi) {
+  		return collectionApi.getFilteredByGlob("content/reading/*.md").filter(book => book.data.finished);
+	});
 };
 
 export const config = {

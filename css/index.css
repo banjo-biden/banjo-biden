@@ -10,7 +10,7 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--background-color: #ebe6f8;
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
@@ -58,6 +58,10 @@ html {
 }
 body {
 	max-width: 40em;
+	border-left: 8px double #ccc;
+  	border-right: 8px double #ccc;
+	border-bottom: 8px double #ccc;
+  	padding: 2rem;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -199,6 +203,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1em;
+	border-bottom: 8px double #ccc;
 }
 .home-link {
 	flex-grow: 1;

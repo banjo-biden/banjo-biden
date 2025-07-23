@@ -40,4 +40,9 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+	eleventyConfig.addFilter("filterTagList", function(tags) {
+    	if (!tags) return [];
+    	// Exclude universal tags like "all" or "posts"
+    	return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+  });
 };

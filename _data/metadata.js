@@ -1,11 +1,11 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
+	title: "JD Is Writing",
+	url: "https://shepherds-view.netlify.app/",
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "Discussing things worth discussing",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "JD",
+		email: "NA@example.com",
+		url: "https://shepherds-view.netlify.app/about/"
 	}
 }
