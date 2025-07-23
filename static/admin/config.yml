@@ -39,7 +39,12 @@ collections:
           widget: "string"
         - label: "Genre"
           name: "genre"
-          widget: "string"
+          widget: "list"
+          summary: "{{fields.genre}}"
+          field::
+            label: "Genre"
+            name: "genre_item"
+            widget: "string"
         - label: "Finished?"
           name: "finished"
           widget: "boolean"
